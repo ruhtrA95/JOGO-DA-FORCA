@@ -1,0 +1,294 @@
+@font-face {
+
+    font-family: "PixelNes";
+    src: url("res/PixelEmulator-xq08.ttf");
+    font-style: normal;
+    
+
+}
+
+body {
+    
+    
+    width: 100vw;
+    height: 100vh;
+    background-color: #4a1e2d;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#actor-div {
+
+    width: 100vw;
+    height: 115px;
+    align-items: center;
+    text-align: center;
+
+}
+
+#actor {
+    width: auto;
+    height: auto;
+    
+}
+
+#div-input-button {
+    margin-top: 20px;
+    display: inline-block;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 58;
+    top: 43vh;
+}
+
+.letras {
+    
+    display: inline;
+    border-bottom: 4px;
+    border-color: antiquewhite;
+    color: antiquewhite;
+    text-align: center;
+    align-items: center;
+    margin-left: 4px;
+    margin-right: 4px;
+    width: 32px;
+}
+
+.buttonadd:hover {
+    background-image: url(img/btns/btn01_hover.jpg);
+    cursor: pointer; 
+    color: yellow;
+}
+
+.buttonadd:active {
+    background-image: url(img/btns/btn01_pressed.jpg);
+    
+}
+
+.div-palavra {
+    display: none;
+    position: relative;
+    padding-top: 8px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 350px;
+    max-width: 90vw;
+    height: 50px;
+    border-radius: 6px;
+    border-left: 2px #4b171b;
+    border-top: 2px #4b171b;
+    border-bottom: 2px #340100;
+    border-right: 2px #340100;
+    border-style: solid;
+    background-color: #572025;
+    align-items: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    font-family: "PixelNes";
+}
+
+.palavras {
+    position: relative;
+    display: inline-block;
+    width: 580px;
+    height: 58px;
+    border-style: solid;
+    border-bottom: 4px;
+    border-color: antiquewhite;
+
+    
+}
+
+.divTXTarea {
+
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 50px;
+}
+
+#letras-selecionadas {
+
+
+    height: 1.1em;
+    margin-bottom: 5px;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    color: antiquewhite;
+    transition-duration: 100ms;
+
+}
+
+
+
+/* botões do teclado ============================================================================*/
+
+#keyboard {
+
+    margin-bottom: 20px;
+    position: absolute;
+    margin-left: 25%;
+    margin-right: 25%;
+    display: none;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    width: 50vw;
+    top: 60vh;
+    transition-duration: 100ms;
+}
+.botoes-teclado {
+    
+    margin: 3px;
+    color: antiquewhite;
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    border-left: 2px #7557a1;
+    border-top: 2px #7557a1;
+    border-bottom: 2px #291e38;
+    border-right: 2px #291e38;
+    background-color: #503c6f;
+    border-style: solid;
+    text-align: center;
+    align-items: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    font-size: 24px;
+    font-family: "PixelNes";
+    transition-duration: 100ms;
+    
+}
+.botoes-teclado:hover {
+    background-color: #695686;
+    cursor: pointer; 
+    color: rgb(251, 255, 0);
+    
+
+}
+.botoes-teclado:active {
+    border-left: 2px #7557a1;
+    border-top: 2px #7557a1;
+    border-bottom: 2px #291e38;
+    border-right: 2px #291e38;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6) inset;
+}
+
+/* ========================================================================================= */
+
+
+
+
+/* balão de fala ============================================================================*/
+
+#balao {
+    font-family: "PixelNes";
+    justify-content: center;
+    top: 45vh;
+    display: none;
+    width: 100vw;
+    position: absolute;
+    height: fit-content;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    transition-duration: 100ms;
+}
+#gameover {
+
+    font-family: "PixelNes";
+    justify-content: center;
+    top: 60vh;
+    display: none;
+    width: 100vw;
+    position: absolute;
+    height: fit-content;
+    text-align: center;
+    align-items: center;
+    transition-duration: 100ms;
+}
+.balao-fala {
+    display: none;
+    font-family: "PixelNes";
+    margin: none;
+    width: 180px;
+    border: 1px black;
+    border-style: solid;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    border-left: 2px #4b171b;
+    border-top: 2px #4b171b;
+    border-bottom: 2px #340100;
+    border-right: 2px #340100;
+    border-style: solid;
+    background-color: #572025;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    transition-duration: 100ms;
+}
+
+
+/* ========================================================================================= */
+
+
+
+
+/* botão start game na tela inicial ======================================================== */
+
+
+.botao-start-gameover {
+    margin-top: 1em;
+    color: antiquewhite;
+    min-width: 8em;
+    max-width: 9em;
+    width: 9em;
+    height: 3em;
+    border-radius: 6px;
+    border-left: 2px #7557a1;
+    border-top: 2px #7557a1;
+    border-bottom: 4px #291e38;
+    border-right: 4px #291e38;
+    border-style: solid;
+    background-color: #503c6f;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    font-family: "PixelNes";
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    transition-duration: 100ms;
+}
+.botao-start-gameover:hover {
+    background-color: #735b97;
+    color: yellow;
+}
+.botao-start-gameover:active {
+    border-left: 2px #7557a1;
+    border-top: 2px #7557a1;
+    border-bottom: 2px #291e38;
+    border-right: 2px #291e38;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6) inset;
+}
+
+/* ======================================================================================== */
+
+@media screen and (max-width: 425px) {
+
+    #keyboard {
+    width: 90vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+    
+
+
+    
+}
+
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Jogo Da Forca</title>
+    <link rel="stylesheet" href="rst.css">
+    <link rel="stylesheet" href="appearance.css">
+    <script src="script.js"></script>
+    <audio src="res/menu-click.mp3" type="audio" id="mouse-click"></audio>
+    <audio src="res/keyboard-click.mp3" type="audio" id="key-click"></audio>
+    <audio src="res/lose.mp3" type="audio" id="click-error"></audio>
+    <audio src="res/success.mp3" type="audio" id="success"></audio>
+    <audio src="res/success.mp3" type="audio" id="victory"></audio>
+    <audio src="res/back-music.mp3" type="audio" id="back-music"></audio>
+    
+    
+
+</head>
+
+<body onload="loadGame()">
+
+    <div id="div-input-button">
+
+        <div id="input" class="div-palavra" style="font-size: 40px; text-align: center; color: antiquewhite;" readonly> 
+        </div>
+
+        <div class="letras"></div>
+
+        <!-- <button type="button" class="buttonadd" onclick="audioClick()"><p id="sp">Sortear Palavra</p></button> -->
+
+        
+    </div>
+
+    <div id="actor-div">
+        
+        <img src="res/anim01.gif" alt="ator" id="actor01">
+        <img src="res/anim02.gif" alt="ator" id="actor02" style="display: none;">
+        <img src="res/anim03.jpg" alt="ator" id="actor03" style="display: none;">
+        
+
+    </div>
+
+    <div id="balao" class="balao-fala">
+        <div id="balao-fala" >
+
+            <p id="fala1">- Carrasco - <br>
+            Diga o nome do seu mandante <br>
+             ou te lançarei no buraco!</p>
+
+            <button id="botao-start-game" class="botao-start-gameover" onclick="startgame()">Iniciar</button>
+
+    
+        </div>
+    </div>
+
+    <div id="gameover" class="balao-fala">
+        <div id="gameover-dialog" >
+
+            <p id="fala2">Game Over!<br>
+                Você Fracassou.
+            </p>
+
+            <button id="botao-gameover" class="botao-start-gameover" onclick="restartGame()">Recomeçar</button>
+
+    
+        </div>
+    </div>
+    
+
+    <div id="keyboard">
+        <button id="tecla-A" readonly class="botoes-teclado" onclick="btnpressed('A')">A</button>
+        <button id="tecla-B" readonly class="botoes-teclado" onclick="btnpressed('B')">B</button>
+        <button id="tecla-C" readonly class="botoes-teclado" onclick="btnpressed('C')">C</button>
+        <button id="tecla-D" readonly class="botoes-teclado" onclick="btnpressed('D')">D</button>
+        <button id="tecla-E" readonly class="botoes-teclado" onclick="btnpressed('E')">E</button>
+        <button id="tecla-F" readonly class="botoes-teclado" onclick="btnpressed('F')">F</button>
+        <button id="tecla-G" readonly class="botoes-teclado" onclick="btnpressed('G')">G</button>
+        <button id="tecla-H" readonly class="botoes-teclado" onclick="btnpressed('H')">H</button>
+        <button id="tecla-I" readonly class="botoes-teclado" onclick="btnpressed('I')">I</button>
+        <button id="tecla-J" readonly class="botoes-teclado" onclick="btnpressed('J')">J</button>
+        <button id="tecla-K" readonly class="botoes-teclado" onclick="btnpressed('K')">K</button>
+        <button id="tecla-L" readonly class="botoes-teclado" onclick="btnpressed('L')">L</button>
+        <button id="tecla-M" readonly class="botoes-teclado" onclick="btnpressed('M')">M</button>
+        <button id="tecla-N" readonly class="botoes-teclado" onclick="btnpressed('N')">N</button>
+        <button id="tecla-O" readonly class="botoes-teclado" onclick="btnpressed('O')">O</button>
+        <button id="tecla-P" readonly class="botoes-teclado" onclick="btnpressed('P')">P</button>
+        <button id="tecla-Q" readonly class="botoes-teclado" onclick="btnpressed('Q')">Q</button>
+        <button id="tecla-R" readonly class="botoes-teclado" onclick="btnpressed('R')">R</button>
+        <button id="tecla-S" readonly class="botoes-teclado" onclick="btnpressed('S')">S</button>
+        <button id="tecla-T" readonly class="botoes-teclado" onclick="btnpressed('T')">T</button>
+        <button id="tecla-U" readonly class="botoes-teclado" onclick="btnpressed('U')">U</button>
+        <button id="tecla-V" readonly class="botoes-teclado" onclick="btnpressed('V')">V</button>
+        <button id="tecla-W" readonly class="botoes-teclado" onclick="btnpressed('W')">W</button>  
+        <button id="tecla-X" readonly class="botoes-teclado" onclick="btnpressed('X')">X</button>
+        <button id="tecla-Y" readonly class="botoes-teclado" onclick="btnpressed('Y')">Y</button>
+        <button id="tecla-Z" readonly class="botoes-teclado" onclick="btnpressed('Z')">Z</button>  
+    </div>
+
+    
+</body>
+
+</html>
